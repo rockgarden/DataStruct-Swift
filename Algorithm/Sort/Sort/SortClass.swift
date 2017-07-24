@@ -27,25 +27,18 @@ class SortFactory {
         switch type {
         case .BubbleSort:
             return BubbleSort()
-            
         case .SelectSort:
             return SimpleSelectionSort()
-            
         case .InsertSort:
             return InsertSort()
-            
         case .ShellSort:
             return ShellSort()
-            
         case .HeapSort:
             return HeapSort()
-            
         case .MergeSort:
             return MergingSort()
-            
         case .QuickSort:
             return QuickSort()
-            
         case .RadixSort:
             return RadixSort()
         }
@@ -57,6 +50,7 @@ typealias SortResultClosure = (_ index: Int, _ value: Int) -> Void
 typealias SortSuccessClosure = (Array<Int>) -> Void
 
 
+/// BaseClass
 class SortBaseClass {
     var everyStepClosure: SortResultClosure!
     var sortSuccessClosure: SortSuccessClosure!
@@ -81,6 +75,7 @@ class SortBaseClass {
     }
 }
 
+
 /// 冒泡排序：时间复杂度----O(n^2)
 class BubbleSort: SortBaseClass, SortType {
     func sort(items: Array<Int>) -> Array<Int> {
@@ -89,7 +84,7 @@ class BubbleSort: SortBaseClass, SortType {
         for i in 0..<list.count {
             var j = list.count - 1
             while j > i {
-                if list[j - 1] > list[j]  { //前边的大于后边的则进行交换
+                if list[j - 1] > list[j] { //前边的大于后边的则进行交换
                     let temp = list[j]
                     list[j] = list[j - 1]
                     list[j - 1] = temp
@@ -138,7 +133,8 @@ class InsertSort: SortBaseClass, SortType{
     }
 }
 
-//希尔排序：时间复杂度----O(n^(3/2))
+
+/// 希尔排序：时间复杂度----O(n^(3/2))
 class ShellSort: SortBaseClass, SortType {
     func sort(items: Array<Int>) -> Array<Int> {
         //print("希尔排序")
@@ -171,6 +167,7 @@ class ShellSort: SortBaseClass, SortType {
         return list
     }
 }
+
 
 /// 简单选择排序－O(n^2)
 class SimpleSelectionSort: SortBaseClass, SortType {
@@ -207,10 +204,8 @@ class SimpleSelectionSort: SortBaseClass, SortType {
         }
         self.successSort(sortList: list)
         return list
-        
     }
 }
-
 
 
 /// 堆排序 (O(nlogn))
@@ -244,8 +239,7 @@ class HeapSort: SortBaseClass, SortType {
         self.successSort(sortList: list)
         return list
     }
-    
-    
+
     /// 构建大顶堆的层次遍历序列（f(i) > f(2i), f(i) > f(2i+1) i > 0）
     ///
     /// - parameter items:    构建大顶堆的序列
@@ -288,7 +282,6 @@ class HeapSort: SortBaseClass, SortType {
 }
 
 
-
 /// 归并排序O(nlogn)
 class MergingSort: SortBaseClass, SortType {
     var tempArray: Array<Array<Int>> = []
@@ -319,8 +312,7 @@ class MergingSort: SortBaseClass, SortType {
         self.successSort(sortList: tempArray.first!)
         return tempArray.first!
     }
-    
-    
+
     /// 归并排序中的“并”--合并：将两个有序数组进行合并
     ///
     /// - parameter firstList:  第一个有序数组
@@ -377,7 +369,6 @@ class QuickSort: SortBaseClass, SortType {
         return list
     }
     
-    
     /// 快速排序
     ///
     /// - parameter list: 要排序的数组
@@ -398,7 +389,6 @@ class QuickSort: SortBaseClass, SortType {
     /// - parameter high: 数组的上界
     ///
     /// - returns: 分界点
-
     private func partition(list: inout Array<Int>, low: Int, high: Int) -> Int {
         var low = low
         var high = high
@@ -426,7 +416,8 @@ class QuickSort: SortBaseClass, SortType {
     }
 }
 
-//基数排序
+
+/// 基数排序
 class RadixSort: SortBaseClass, SortType {
     func sort(items: Array<Int>) -> Array<Int> {
         var list = items
@@ -471,8 +462,7 @@ class RadixSort: SortBaseClass, SortType {
         }
         return bucket
     }
-    
-    
+
     /// 计算序列中最大的那个数
     ///
     /// - parameter list: 数列
@@ -487,8 +477,7 @@ class RadixSort: SortBaseClass, SortType {
         }
         return maxNumber
     }
-    
-    
+
     /// 获取数字的长度
     ///
     /// - parameter number: 该数字
@@ -497,8 +486,7 @@ class RadixSort: SortBaseClass, SortType {
     func numberLength(number: Int) -> Int {
         return "\(number)".characters.count
     }
-    
-    
+
     /// 获取相应位置的数字
     ///
     /// - parameter number: 操作的数字
@@ -517,7 +505,3 @@ class RadixSort: SortBaseClass, SortType {
     }
     
 }
-
-
-
-

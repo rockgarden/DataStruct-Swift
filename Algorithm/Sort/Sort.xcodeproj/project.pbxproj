@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443D1CB61F263CD3001983F4 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443D1CB51F263CD3001983F4 /* Timeline.swift */; };
 		C2C0C2FF1F258FEB00421E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C2FE1F258FEB00421E1C /* AppDelegate.swift */; };
 		C2C0C3011F258FEB00421E1C /* SortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C3001F258FEB00421E1C /* SortVC.swift */; };
 		C2C0C3041F258FEB00421E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C0C3021F258FEB00421E1C /* Main.storyboard */; };
@@ -26,7 +27,7 @@
 		C2C0C3361F25B84A00421E1C /* CompareFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C3301F25B7DC00421E1C /* CompareFunctions.swift */; };
 		C2C0C3371F25B84E00421E1C /* NSSortDescriptor+CompareFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C3311F25B7DC00421E1C /* NSSortDescriptor+CompareFunction.swift */; };
 		C2C0C3391F25B97600421E1C /* SortAlgorithmBenchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C3381F25B97600421E1C /* SortAlgorithmBenchmark.swift */; };
-		C2C0C33B1F25BCD100421E1C /* sorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C33A1F25BCD100421E1C /* sorts.swift */; };
+		C2C0C33B1F25BCD100421E1C /* SortFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C33A1F25BCD100421E1C /* SortFunc.swift */; };
 		C2C0C33D1F25BD1200421E1C /* sortUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C0C33C1F25BD1200421E1C /* sortUtils.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		443D1CB51F263CD3001983F4 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		C2C0C2FB1F258FEB00421E1C /* Sort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C0C2FE1F258FEB00421E1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C0C3001F258FEB00421E1C /* SortVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVC.swift; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		C2C0C3311F25B7DC00421E1C /* NSSortDescriptor+CompareFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+CompareFunction.swift"; sourceTree = "<group>"; };
 		C2C0C3341F25B81600421E1C /* SwiftSortUtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSortUtilsTests.swift; sourceTree = "<group>"; };
 		C2C0C3381F25B97600421E1C /* SortAlgorithmBenchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortAlgorithmBenchmark.swift; sourceTree = "<group>"; };
-		C2C0C33A1F25BCD100421E1C /* sorts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sorts.swift; sourceTree = "<group>"; };
+		C2C0C33A1F25BCD100421E1C /* SortFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortFunc.swift; sourceTree = "<group>"; };
 		C2C0C33C1F25BD1200421E1C /* sortUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sortUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,13 +111,14 @@
 				C2C0C3001F258FEB00421E1C /* SortVC.swift */,
 				C2C0C3131F25901D00421E1C /* Sort.swift */,
 				C2C0C3141F25901D00421E1C /* SortClass.swift */,
+				C2C0C33A1F25BCD100421E1C /* SortFunc.swift */,
 				C2C0C3171F25902800421E1C /* SortView.swift */,
 				C2C0C3191F25B3B600421E1C /* SortedArray.swift */,
 				C2C0C33C1F25BD1200421E1C /* sortUtils.swift */,
-				C2C0C33A1F25BCD100421E1C /* sorts.swift */,
 				C2C0C3301F25B7DC00421E1C /* CompareFunctions.swift */,
 				C2C0C3311F25B7DC00421E1C /* NSSortDescriptor+CompareFunction.swift */,
 				C2C0C3381F25B97600421E1C /* SortAlgorithmBenchmark.swift */,
+				443D1CB51F263CD3001983F4 /* Timeline.swift */,
 				C2C0C3081F258FEB00421E1C /* Assets.xcassets */,
 				C2C0C30A1F258FEB00421E1C /* LaunchScreen.storyboard */,
 				C2C0C30D1F258FEB00421E1C /* Info.plist */,
@@ -249,7 +252,8 @@
 				C2C0C3151F25901D00421E1C /* Sort.swift in Sources */,
 				C2C0C33D1F25BD1200421E1C /* sortUtils.swift in Sources */,
 				C2C0C3161F25901D00421E1C /* SortClass.swift in Sources */,
-				C2C0C33B1F25BCD100421E1C /* sorts.swift in Sources */,
+				C2C0C33B1F25BCD100421E1C /* SortFunc.swift in Sources */,
+				443D1CB61F263CD3001983F4 /* Timeline.swift in Sources */,
 				C2C0C2FF1F258FEB00421E1C /* AppDelegate.swift in Sources */,
 				C2C0C3071F258FEB00421E1C /* Sort.xcdatamodeld in Sources */,
 			);
@@ -466,6 +470,7 @@
 				C2C0C3121F258FEB00421E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2C0C3261F25B3C800421E1C /* Build configuration list for PBXNativeTarget "SortTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +479,7 @@
 				C2C0C3281F25B3C800421E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

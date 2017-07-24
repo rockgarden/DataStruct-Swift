@@ -10,35 +10,6 @@
 
 import Foundation
 
-typealias SortAlgorithmClosure = (_ arr: [Int]) -> [Int]
-
-enum SortAlgorithm : String {
-    case Swift = "Swift"
-    case Quick = "Quick"
-    case Heap = "Heap"
-    case Insertion = "Insertion"
-    case Selection = "Selection"
-    
-    var closure: SortAlgorithmClosure {
-        switch self {
-        case .Swift:
-            return swiftSort
-            
-        case .Quick:
-            return quickSort
-            
-        case .Heap:
-            return heapSort
-            
-        case .Insertion:
-            return insertionSort
-            
-        case .Selection:
-            return selectionSort
-            }
-    }
-}
-
 
 class SortAlgorithmBenchmark {
     
